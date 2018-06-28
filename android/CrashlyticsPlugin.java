@@ -15,8 +15,9 @@ import com.tealeaf.plugin.IPlugin;
 import com.tealeaf.logger;
 
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.core.CrashlyticsCore;
+import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
+
 
 public class CrashlyticsPlugin implements IPlugin {
 
@@ -85,10 +86,7 @@ public class CrashlyticsPlugin implements IPlugin {
 
     _activity = activity;
 
-    Crashlytics crashlyticsKit = new Crashlytics.Builder()
-      .core(new CrashlyticsCore.Builder().disabled(isDebuggable()).build())
-      .build();
-    Fabric.with(activity, crashlyticsKit);
+    Fabric.with(_activity, new Crashlytics());
   }
 
   public void onResume() {

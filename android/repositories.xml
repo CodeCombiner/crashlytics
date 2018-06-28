@@ -1,0 +1,4 @@
+//<!--START_PLUGINS_REPOSITORIES-->
+	//<!--Crashlytics Dependencies-->
+  maven { url 'https://maven.fabric.io/public' }
+//<!--END_PLUGINS_REPOSITORIES-->

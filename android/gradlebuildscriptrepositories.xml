@@ -1,0 +1,5 @@
+//<!--START_BUILDSCRIPT_REPOS-->
+	//<!--Fabric Crashlytics-->
+    maven { url 'https://maven.fabric.io/public' }
+//<!--END_BUILDSCRIPT_REPOS-->
+

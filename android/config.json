@@ -2,9 +2,11 @@
   "copyFiles": [
     "CrashlyticsPlugin.java"
   ],
-  "jars": [
-    "libs/hc-crashlytics-1.0.jar"
-  ],
   "injectionXML": "manifest.xml",
-  "injectionXSL": "manifest.xsl"
+  "injectionXSL": "manifest.xsl",
+  "injectionTealeafModuleGradleXML": "gradletealeaf.xml",
+  "injectionTealeafModuleGradleAndroidPluginsGradleXML": "gradlepluginstealeaf.xml",
+  "injectionGradleClasspathXML": "gradleclasspath.xml",
+  "injectionRepositoriesXML": "repositories.xml",
+  "injectionBuildScriptRepositoriesXML": "gradlebuildscriptrepositories.xml"
 }
