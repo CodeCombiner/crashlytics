@@ -4,3 +4,7 @@
         transitive = true;
     }
 //<!--END_PLUGINS_DEPENDENCIES-->
+//<!--START_ANDROID_PLUGINS-->
+	//<!-- Crashlytics Fabric Plugin-->
+	apply plugin: 'io.fabric'
+//<!--END_ANDROID_PLUGINS-->

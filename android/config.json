@@ -4,9 +4,6 @@
   ],
   "injectionXML": "manifest.xml",
   "injectionXSL": "manifest.xsl",
-  "injectionTealeafModuleGradleXML": "gradletealeaf.xml",
-  "injectionTealeafModuleGradleAndroidPluginsGradleXML": "gradlepluginstealeaf.xml",
-  "injectionGradleClasspathXML": "gradleclasspath.xml",
-  "injectionRepositoriesXML": "repositories.xml",
-  "injectionBuildScriptRepositoriesXML": "gradlebuildscriptrepositories.xml"
+  "injectionTealeafModuleGradleXML": "gradletealeaf.xml"
+  "injectionGradleClasspathXML": "gradleclasspath.xml"
 }
