@@ -24,7 +24,8 @@ public class CrashlyticsPlugin implements IPlugin {
   Activity _activity;
 
   public void onCreateApplication(Context applicationContext) {
-
+    logger.log("{crashlytics} registeriing crashlytics");
+    Fabric.with(applicationContext);
   }
 
   private int getLogLevel(String level) {
@@ -82,11 +83,7 @@ public class CrashlyticsPlugin implements IPlugin {
   }
 
   public void onCreate(Activity activity, Bundle savedInstanceState) {
-    logger.log("{crashlytics} registeriing crashlytics");
-
-    _activity = activity;
-
-    Fabric.with(_activity, new Crashlytics());
+       _activity = activity;
   }
 
   public void onResume() {
