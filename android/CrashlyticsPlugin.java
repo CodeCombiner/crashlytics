@@ -15,7 +15,6 @@ import com.tealeaf.plugin.IPlugin;
 import com.tealeaf.logger;
 
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 
 
@@ -25,7 +24,14 @@ public class CrashlyticsPlugin implements IPlugin {
 
   public void onCreateApplication(Context applicationContext) {
     logger.log("{crashlytics} registeriing crashlytics");
-    Fabric.with(applicationContext, new Crashlytics());
+      Fabric.Builder fb = new Fabric.Builder(applicationContext)
+            .kits(new Crashlytics(), new CrashlyticsNdk());
+
+    if (isDebuggable()) {
+      fb.debuggable(true);
+    }
+    Fabric fabric = fb.build();
+    Fabric.with(fabric);
   }
 
   private int getLogLevel(String level) {
