@@ -25,7 +25,7 @@ public class CrashlyticsPlugin implements IPlugin {
   public void onCreateApplication(Context applicationContext) {
     logger.log("{crashlytics} registeriing crashlytics");
       Fabric.Builder fb = new Fabric.Builder(applicationContext)
-            .kits(new Crashlytics(), new CrashlyticsNdk());
+            .kits(new Crashlytics());
 
     if (isDebuggable()) {
       fb.debuggable(true);
